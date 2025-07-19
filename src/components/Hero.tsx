@@ -11,6 +11,16 @@ const Hero = () => {
     }
   };
 
+  // Function to trigger resume download
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Nikith_Resume.pdf'; // must be inside public/
+    link.download = 'Nikith_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="home"
@@ -32,6 +42,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Small Badge */}
             <motion.div
               className="mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -43,6 +54,7 @@ const Hero = () => {
               </span>
             </motion.div>
 
+            {/* Heading */}
             <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
@@ -52,6 +64,7 @@ const Hero = () => {
               Hi, I'm <span className="heading-gradient">Nikith</span>
             </motion.h1>
 
+            {/* Typing Animation */}
             <div className="text-xl md:text-2xl lg:text-3xl mb-8 h-20 flex items-center justify-center lg:justify-start">
               <TypeAnimation
                 sequence={[
@@ -71,6 +84,7 @@ const Hero = () => {
               />
             </div>
 
+            {/* Short Bio */}
             <motion.p
               className="text-lg text-foreground/70 mb-8 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
@@ -101,16 +115,15 @@ const Hero = () => {
               </Button>
 
               {/* Download Resume */}
-              <a href="/Nikith_Resume.pdf" download="Nikith_Resume.pdf">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="glass-card border-accent/30 hover:glow-purple"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
-              </a>
+              <Button
+                variant="outline"
+                size="lg"
+                className="glass-card border-accent/30 hover:glow-purple"
+                onClick={handleDownloadResume}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </Button>
             </motion.div>
 
             {/* Quick Stats */}
