@@ -95,14 +95,17 @@ const Hero = () => {
                 <Eye className="w-5 h-5 mr-2" />
                 View My Work
               </Button>
+              <a href="/Nikith_Resume.pdf" download="Nikith_Resume.pdf">
               <Button
-                variant="outline"
-                size="lg"
-                className="glass-card border-accent/30 hover:glow-purple"
-              >
-                <Download className="w-5 h-5 mr-2" />
+                 variant="outline"
+                 size="lg"
+                 className="glass-card border-accent/30 hover:glow-purple"
+                 >
+                 <Download className="w-5 h-5 mr-2" />
                 Download Resume
               </Button>
+              </a>
+
             </motion.div>
 
             {/* Quick Stats */}
