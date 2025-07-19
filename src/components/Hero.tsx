@@ -12,7 +12,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -22,7 +25,6 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
           {/* Text Content */}
           <motion.div
             className="text-center lg:text-left"
@@ -47,8 +49,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Hi, I'm{' '}
-              <span className="heading-gradient">Nikith</span>
+              Hi, I'm <span className="heading-gradient">Nikith</span>
             </motion.h1>
 
             <div className="text-xl md:text-2xl lg:text-3xl mb-8 h-20 flex items-center justify-center lg:justify-start">
@@ -76,17 +77,20 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Training models to think, and myself to think beyond. Currently pursuing B.Tech in CSE (AI & ML) 
-              at ALIET – JNTU Kakinada with 8.8 CGPA. Multiple-time hackathon finalist passionate about 
-              building intelligent systems.
+              Training models to think, and myself to think beyond. Currently
+              pursuing B.Tech in CSE (AI & ML) at ALIET – JNTU Kakinada with 8.8
+              CGPA. Multiple-time hackathon finalist passionate about building
+              intelligent systems.
             </motion.p>
 
+            {/* Action Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.6 }}
             >
+              {/* View Projects */}
               <Button
                 size="lg"
                 onClick={() => scrollToSection('projects')}
@@ -95,17 +99,18 @@ const Hero = () => {
                 <Eye className="w-5 h-5 mr-2" />
                 View My Work
               </Button>
-              <a href="/Nikith_Resume.pdf" download="Nikith_Resume.pdf">
-              <Button
-                 variant="outline"
-                 size="lg"
-                 className="glass-card border-accent/30 hover:glow-purple"
-                 >
-                 <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </Button>
-              </a>
 
+              {/* Download Resume */}
+              <a href="/Nikith_Resume.pdf" download="Nikith_Resume.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="glass-card border-accent/30 hover:glow-purple"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                </Button>
+              </a>
             </motion.div>
 
             {/* Quick Stats */}
@@ -121,7 +126,9 @@ const Hero = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold heading-gradient">4+</div>
-                <div className="text-sm text-foreground/60">Hackathon Finalist</div>
+                <div className="text-sm text-foreground/60">
+                  Hackathon Finalist
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold heading-gradient">5+</div>
@@ -146,16 +153,20 @@ const Hero = () => {
               <motion.div
                 className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-primary p-1 blur-sm"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: 'linear',
+                }}
               >
                 <div className="w-full h-full rounded-full bg-background"></div>
               </motion.div>
-              
+
               {/* Profile Image */}
               <motion.div
                 className="relative w-80 h-80 rounded-full overflow-hidden glass-card floating"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               >
                 <img
                   src="/lovable-uploads/ff606a4e-1584-4192-85aa-056d84441eb6.png"
@@ -169,15 +180,24 @@ const Hero = () => {
               <motion.div
                 className="absolute -top-4 -right-4 w-16 h-16 glass-card rounded-full flex items-center justify-center"
                 animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
               >
                 <span className="text-2xl">🤖</span>
               </motion.div>
-              
+
               <motion.div
                 className="absolute -bottom-4 -left-4 w-16 h-16 glass-card rounded-full flex items-center justify-center"
                 animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 1.5,
+                }}
               >
                 <span className="text-2xl">🧠</span>
               </motion.div>
@@ -185,7 +205,11 @@ const Hero = () => {
               <motion.div
                 className="absolute top-1/2 -left-8 w-12 h-12 glass-card rounded-full flex items-center justify-center"
                 animate={{ x: [-5, 5, -5] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
               >
                 <span className="text-xl">⚡</span>
               </motion.div>
@@ -205,7 +229,11 @@ const Hero = () => {
           onClick={() => scrollToSection('about')}
           className="p-3 glass-card rounded-full hover:glow-soft"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
           whileHover={{ scale: 1.1 }}
         >
           <ArrowDown className="w-6 h-6 text-primary" />
