@@ -40,7 +40,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <span className="text-xl font-bold heading-gradient">
-              Nikith.AI
+              Nikith Nandi 
             </span>
           </motion.div>
 
