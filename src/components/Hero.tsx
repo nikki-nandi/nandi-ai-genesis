@@ -11,10 +11,10 @@ const Hero = () => {
     }
   };
 
-  // Function to trigger resume download
+  // ✅ Function to force download
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Nikith_Resume.pdf'; // must be inside public/
+    link.href = '/Nikith_Resume.pdf'; // Must be inside public/
     link.download = 'Nikith_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -26,7 +26,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
+      {/* ✅ Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -35,7 +35,8 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+          
+          {/* ✅ Left Content */}
           <motion.div
             className="text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
@@ -54,7 +55,7 @@ const Hero = () => {
               </span>
             </motion.div>
 
-            {/* Heading */}
+            {/* Name */}
             <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
@@ -84,7 +85,7 @@ const Hero = () => {
               />
             </div>
 
-            {/* Short Bio */}
+            {/* Short Intro */}
             <motion.p
               className="text-lg text-foreground/70 mb-8 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
@@ -92,12 +93,12 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               Training models to think, and myself to think beyond. Currently
-              pursuing B.Tech in CSE (AI & ML) at ALIET – JNTU Kakinada with 8.8
-              CGPA. Multiple-time hackathon finalist passionate about building
-              intelligent systems.
+              pursuing B.Tech in CSE (AI & ML) at ALIET – JNTU Kakinada with
+              8.8 CGPA. Multiple-time hackathon finalist passionate about
+              building intelligent systems.
             </motion.p>
 
-            {/* Action Buttons */}
+            {/* ✅ Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
@@ -114,7 +115,7 @@ const Hero = () => {
                 View My Work
               </Button>
 
-              {/* Download Resume */}
+              {/* ✅ Download Resume */}
               <Button
                 variant="outline"
                 size="lg"
@@ -126,7 +127,7 @@ const Hero = () => {
               </Button>
             </motion.div>
 
-            {/* Quick Stats */}
+            {/* ✅ Quick Stats */}
             <motion.div
               className="flex flex-wrap gap-6 mt-12 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
@@ -139,9 +140,7 @@ const Hero = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold heading-gradient">4+</div>
-                <div className="text-sm text-foreground/60">
-                  Hackathon Finalist
-                </div>
+                <div className="text-sm text-foreground/60">Hackathon Finalist</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold heading-gradient">5+</div>
@@ -154,7 +153,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Profile Image with 3D Effect */}
+          {/* ✅ Right Side Profile */}
           <motion.div
             className="relative flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
@@ -189,28 +188,19 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
               </motion.div>
 
-              {/* Floating Tech Icons */}
+              {/* Floating Icons */}
               <motion.div
                 className="absolute -top-4 -right-4 w-16 h-16 glass-card rounded-full flex items-center justify-center"
                 animate={{ y: [-10, 10, -10] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <span className="text-2xl">🤖</span>
               </motion.div>
-
+              
               <motion.div
                 className="absolute -bottom-4 -left-4 w-16 h-16 glass-card rounded-full flex items-center justify-center"
                 animate={{ y: [10, -10, 10] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: 1.5,
-                }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
               >
                 <span className="text-2xl">🧠</span>
               </motion.div>
@@ -218,11 +208,7 @@ const Hero = () => {
               <motion.div
                 className="absolute top-1/2 -left-8 w-12 h-12 glass-card rounded-full flex items-center justify-center"
                 animate={{ x: [-5, 5, -5] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <span className="text-xl">⚡</span>
               </motion.div>
@@ -231,7 +217,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* ✅ Scroll Indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 20 }}
@@ -242,11 +228,7 @@ const Hero = () => {
           onClick={() => scrollToSection('about')}
           className="p-3 glass-card rounded-full hover:glow-soft"
           animate={{ y: [0, 10, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           whileHover={{ scale: 1.1 }}
         >
           <ArrowDown className="w-6 h-6 text-primary" />
